@@ -1,0 +1,21 @@
+1.icem in/out/in2 导出到openfoam中只识别出in/curves
+	几何条件边界重新设置一遍应该能解决
+
+2.of中p/U type的设置 noSlip/zeroGradient/fixedValue
+	boundary中的wall和patch怎么和U、p对应呢
+	p的出口一般为fixed0，其他为zeroGradient 
+	U的出口一般为zeroGradient，入口给定个fixedValue，其他noSlip
+
+3.Co数会计算，但是其中怎么看网格尺寸以确定时间步长
+
+4.画网格时候设置spacing ratio的目的
+
+5.画网格导致的伪扩散问题？
+
+6.nNonOrthogonalCorrectors设置成多少？
+
+7.FOAM：tmp<scalarField>a=A( ) tmp类的用法
+	http://blog.sina.com.cn/s/blog_5fdfa7e60100rdb3.html
+
+8.动力粘性系数 速度梯度的单位应该很简单，怎么推呢
+
